@@ -1,0 +1,306 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(64, 64, 64);
+}
+
+.navbar {
+  display: flex;
+
+  background-color: rgb(3, 3, 3);
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+
+.menu a{
+position: relative;
+color: white;
+ text-decoration: none;
+  margin-left: 2rem;
+  transition: 0.3s;
+
+
+}
+.menu a::after{
+
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: yellow;
+  left: 0;
+  bottom: -6px;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: 0.3s;
+  transform-origin: right;
+}
+
+.menu a:hover::after{
+  transform: scale(1);
+  transform-origin: left;
+  
+}
+.menu a:hover{
+
+  color: yellow;
+}
+
+
+
+/*-----LOGO----*/
+.LOGO {
+
+  position: absolute;
+
+}
+
+.LOGO img {
+
+  width: 8rem;
+  height: 6rem;
+}
+
+/*---Hot_manga-----*/
+
+.container-hot-manga{
+margin-top: 40ch;
+right: 0;
+width: 25rem;
+height: 50rem;
+position: absolute;
+
+
+
+
+}
+
+.Hot-manga{
+  background-color: rgb(26, 26, 26);
+  max-width: 50ch;
+  width: 100%;
+  height: 50rem;
+  border: 1px solid rgb(255, 0, 0);
+  border: none;
+  border-radius: 4px;
+  
+  
+
+}
+.header-hot-manga{
+
+  position: relative;
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  background-color: gray;
+  border-radius: 3px;
+  
+
+}
+.ranking{
+  margin-left: 30px;
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  border-radius: 98%;
+  position: absolute;
+  
+}
+
+.ranking .number{
+  
+  padding: 2px;
+  text-align: center;
+  color: white;
+}
+ .slot img{
+  
+width: 70px;
+margin-top: 12px;
+margin-left: 10px;
+
+}
+
+.border-slot{
+
+  background-color: rgb(26, 26, 26);
+  position: relative;
+
+}
+.border-slot:hover{
+  cursor: pointer;
+  background-color: rgb(32, 31, 31);
+}
+
+a{
+
+  text-decoration: none;
+}
+
+.text {
+bottom: 80px;
+position: relative;
+margin-left: 100px;
+color: white;
+}
+
+
+
+
+/*------------------*/
+
+/*-----container-----*/
+
+.container {
+  position: relative;
+max-width: 120ch;
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+  padding: 20px;
+  background-color: rgb(222, 222, 222);
+  margin-left: 5px;
+  margin-top: 5rem;
+  border-radius: 5px;
+}
+
+.header {
+  max-width: 20ch;
+  width: 100%;
+  height: 7ch;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+h1{
+  font-size: 1.4rem;
+  position: absolute;
+  
+}
+
+.grid .box-container {
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+}
+
+.manga-items {
+
+  width: 12rem;
+  height: 290px;
+  filter: drop-shadow(0px 0px 5px black); /*Horizontal , Vertical , blur , spread , color*/
+}
+
+.manga-items img {
+
+  width: 11rem;
+  position: relative;
+  
+}
+
+.intro h5 {
+  font-size: 1rem;
+
+}
+
+ .intro p {
+
+  font-size: 10px;
+  
+  
+}
+.manga-items a{
+  text-decoration: none;
+}
+
+.intro {
+
+  
+  width: 11rem;
+  height: 60px;
+  background: linear-gradient(rgba(52, 52, 52, 0.1),rgba(0, 0, 0, 0.9)60%);
+  padding: 11px;
+  color: rgb(255, 255, 255);
+  bottom: 64px;
+  box-shadow: 10px;
+  transition: 0.1s;
+  position: relative;
+  
+  
+ 
+  
+  
+  
+}
+.intro h5{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.intro p{
+  margin-top: 5px;
+}
+ .manga-items:hover{
+
+  cursor: pointer;
+}
+
+ .manga-items :hover .intro{
+  height: 80px;
+  bottom: 84px;
+  position: relative;
+
+}
+
+.manga-items :hover h5{
+  color: rgb(255, 238, 0);
+}
+
+/*container-query*/
+.container-query{
+
+  container-type: inline-size;
+}
+@container(max-width: 980px){
+
+  .container-hot-manga{
+
+   display: none;
+   
+  }
+  .grid .box-container{
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+
+@container(max-width: 780px){
+
+  .grid .box-container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+}
+
